@@ -109,8 +109,8 @@ function main {
   get_command
   validate_source_and_destination
 
-  # Increase the max concurrent requests for se
-  aws configure set default.s3.max_concurrent_requests 255
+  # Increase the max concurrent requests for s3
+  aws configure set default.s3.max_concurrent_requests 1000
 
   aws --version
 
