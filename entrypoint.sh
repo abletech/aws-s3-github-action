@@ -109,6 +109,9 @@ function main {
   get_command
   validate_source_and_destination
 
+  # Increase the max concurrent requests for se
+  aws configure set default.s3.max_concurrent_requests 255
+
   aws --version
 
   if [ "$COMMAND" == "cp" ] || [ "$COMMAND" == "mv" ] || [ "$COMMAND" == "sync" ]
